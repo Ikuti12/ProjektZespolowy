@@ -65,20 +65,20 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
             {
                 if(!NameMatches())
                 {
-                    NameError ="Imie nie pasuje do podanego Indeksu";
+                    NameError ="Imię nie pasuje do podanego indeksu";
                 }
                 if (!IndexExists())
                 {
-                    IndexError = "Podany indeks nie znajduje sie w bazie danych";
+                    IndexError = "Podany indeks nie znajduje się w bazie danych";
                 }
                 if (!LastnameMatches())
                 {
-                    LastnameError = "Nazwisko nie pasuje do podanego Indeksu";
+                    LastnameError = "Nazwisko nie pasuje do podanego indeksu";
                 }
             }
             else if (!NoRoomAssigned())
             {
-                    NameError = "Masz juz pokój dopasowany, w razie błędów proszę powiadomić obsługę";
+                    NameError = "Masz juz przydzielony pokój, w razie błędów proszę powiadomić obsługę";
                     IndexError = "";
                     LastnameError = "";
             }
