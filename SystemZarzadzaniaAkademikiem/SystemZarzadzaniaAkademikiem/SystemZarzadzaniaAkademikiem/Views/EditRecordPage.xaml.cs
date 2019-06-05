@@ -17,7 +17,7 @@ namespace SystemZarzadzaniaAkademikiem.Views
             this.tableName = tableName;
             this.id = id;
             InitializeComponent ();
-            BindingContext = viewModel = new EditRecordViewModel(tableName,id);
+            BindingContext = viewModel = new EditRecordViewModel(tableName,id, App.Database);
         }
         protected override void OnAppearing()
         {

@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Enums;
 using SystemZarzadzaniaAkademikiem.ViewModels;
 using Xamarin.Forms;
@@ -12,18 +13,19 @@ namespace SystemZarzadzaniaAkademikiem.Views
 	public partial class TableDetailPage : ContentPage
 	{
         TableDetailViewModel viewModel;
+        AppDatabase database;
         public bool isLoading;
-		public TableDetailPage (TableDetailViewModel tableDetailViewModel)
+		public TableDetailPage (TableDetailViewModel tableDetailViewModel, AppDatabase database)
 		{
 			InitializeComponent ();
-
+            this.database = database;
             BindingContext = viewModel = tableDetailViewModel;
         }
         protected override void OnAppearing()
         {
             if (Content == null)
             {
-                List<SQLiteConnection.ColumnInfo> list = App.Database.DatabaseNotAsync.GetTableInfo(viewModel.name);
+                List<SQLiteConnection.ColumnInfo> list = database.DatabaseNotAsync.GetTableInfo(viewModel.name);
                 StackLayout main = new StackLayout { Orientation = StackOrientation.Vertical };
                 Grid mainGrid = new Grid { MinimumHeightRequest = 80 };
                 StackLayout s = new StackLayout();
@@ -154,7 +156,7 @@ namespace SystemZarzadzaniaAkademikiem.Views
             SQLitePCL.sqlite3_stmt stQuery = null;
             try
             {
-                stQuery = SQLite3.Prepare2(App.Database.DatabaseNotAsync.Handle, sqlString);
+                stQuery = SQLite3.Prepare2(database.DatabaseNotAsync.Handle, sqlString);
                 var colLenght = SQLite3.ColumnCount(stQuery);
 
                 if (includeColumnNamesAsFirstRow)

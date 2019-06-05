@@ -1,4 +1,5 @@
-﻿using SystemZarzadzaniaAkademikiem.Enums;
+﻿using SystemZarzadzaniaAkademikiem.Data;
+using SystemZarzadzaniaAkademikiem.Enums;
 using SystemZarzadzaniaAkademikiem.Models;
 using SystemZarzadzaniaAkademikiem.Services;
 using SystemZarzadzaniaAkademikiem.Validators;
@@ -18,13 +19,13 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
 
         public UserRepo userRepo;
 
-        public ImportantDataViewModel(User user = null)
+        public ImportantDataViewModel(AppDatabase database,User user = null)
         {
             _name = user?.Name;
             _lastname = user?.Lastname;
             _index = user?.Index;
             SaveImportantDataPreferences = new Command(ExecuteSaveImportantDataPreferences);
-            userRepo = new UserRepo(App.Database);
+            userRepo = new UserRepo(database);
         }
 
         public Command SaveImportantDataPreferences { get; set; }

@@ -1,4 +1,5 @@
-﻿using SystemZarzadzaniaAkademikiem.Enums;
+﻿using SystemZarzadzaniaAkademikiem.Data;
+using SystemZarzadzaniaAkademikiem.Enums;
 using SystemZarzadzaniaAkademikiem.Models;
 using SystemZarzadzaniaAkademikiem.Services;
 using Xamarin.Forms;
@@ -12,12 +13,12 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         private readonly UserRepo userRepo;
         public bool isValid = false;
 
-        public SpecificDataPage1ViewModel(string index)
+        public SpecificDataPage1ViewModel(string index, AppDatabase database)
         {
             user = new User();
             this.index = index;
             SaveSpecificData1 = new Command(ExecuteSaveSpecificData1);
-            userRepo = new UserRepo(App.Database);
+            userRepo = new UserRepo(database);
         }
 
         public Command SaveSpecificData1 { get; set; }

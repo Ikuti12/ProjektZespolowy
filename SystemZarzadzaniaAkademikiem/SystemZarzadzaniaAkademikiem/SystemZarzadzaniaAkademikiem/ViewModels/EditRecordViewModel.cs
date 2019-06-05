@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using SQLite;
+using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Models;
 using SystemZarzadzaniaAkademikiem.Services;
 using Xamarin.Forms;
@@ -14,19 +15,21 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         private UserRepo userRepo;
         private AdminRepo adminRepo;
         private RoomRepo roomRepo;
+        private AppDatabase database;
         public ObservableCollection<Column> Columns { get; set; }
         public Command EditRecordCommand { get; set; }
         private string tableName;
         private object id;
-        public EditRecordViewModel(string tableName,object id)
+        public EditRecordViewModel(string tableName,object id, AppDatabase database)
         {
             Title = "Edit Column";
             this.tableName = tableName;
             this.id = id;
             Columns = new ObservableCollection<Column>();
-            userRepo = new UserRepo(App.Database);
-            adminRepo = new AdminRepo(App.Database);
-            roomRepo = new RoomRepo(App.Database);
+            this.database = database;
+            userRepo = new UserRepo(database);
+            adminRepo = new AdminRepo(database);
+            roomRepo = new RoomRepo(database);
             EditRecordCommand = new Command(() => ExecuteEditRecordCommand());
 
         }
@@ -37,7 +40,7 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
                 return new Command((id) =>
                 {
                     Columns.Clear();
-                    List<SQLiteConnection.ColumnInfo> list = App.Database.DatabaseNotAsync.GetTableInfo(tableName);
+                    List<SQLiteConnection.ColumnInfo> list = database.DatabaseNotAsync.GetTableInfo(tableName);
                     foreach (var a in list)
                     {
                         if (a.Name.ToLower() != "id" &&a.Name.ToLower() != "salt")
@@ -154,7 +157,7 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
             SQLitePCL.sqlite3_stmt stQuery = null;
             try
             {
-                stQuery = SQLite3.Prepare2(App.Database.DatabaseNotAsync.Handle, sqlString);
+                stQuery = SQLite3.Prepare2(database.DatabaseNotAsync.Handle, sqlString);
                 var colLenght = SQLite3.ColumnCount(stQuery);
                 while (SQLite3.Step(stQuery) == SQLite3.Result.Row)
                 {

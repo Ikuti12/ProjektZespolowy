@@ -12,7 +12,7 @@ namespace SystemZarzadzaniaAkademikiem.Views
         public ImportantDataPage ()
 		{
 			InitializeComponent ();
-            viewModel = new ImportantDataViewModel();
+            viewModel = new ImportantDataViewModel(App.Database);
             BindingContext = viewModel;
         }
 
@@ -20,7 +20,7 @@ namespace SystemZarzadzaniaAkademikiem.Views
         {
             if (viewModel.isValid)
             {
-                await Navigation.PushAsync(new SpecificDataPage1(new SpecificDataPage1ViewModel(viewModel.Index)));
+                await Navigation.PushAsync(new SpecificDataPage1(new SpecificDataPage1ViewModel(viewModel.Index, App.Database)));
             }
         }
     }

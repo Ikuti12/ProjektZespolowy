@@ -11,7 +11,7 @@ namespace SystemZarzadzaniaAkademikiem.Views
 		public AdminLoginPage ()
 		{
 			InitializeComponent ();
-            BindingContext = viewModel = new AdminLoginViewModel();
+            BindingContext = viewModel = new AdminLoginViewModel(App.Database);
 		}
     }
 }

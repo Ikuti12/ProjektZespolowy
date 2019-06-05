@@ -1,6 +1,7 @@
 ﻿using SystemZarzadzaniaAkademikiem.Services;
 using Xamarin.Forms;
 using SystemZarzadzaniaAkademikiem.Validators;
+using SystemZarzadzaniaAkademikiem.Data;
 
 namespace SystemZarzadzaniaAkademikiem.ViewModels
 {
@@ -65,11 +66,12 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         }
         public Command ChangeAdmin { get; set; }
         AdminRepo adminRepo;
-        public AdminChangeViewModel()
+        private AppDatabase database;
+        public AdminChangeViewModel(AppDatabase database)
         {
             Title = "Changing Admin Credentials";
             ChangeAdmin = new Command(ExecuteChangeAdmin);
-            adminRepo = new AdminRepo(App.Database);
+            adminRepo = new AdminRepo(database);
         }
         public void ClearData()
         {

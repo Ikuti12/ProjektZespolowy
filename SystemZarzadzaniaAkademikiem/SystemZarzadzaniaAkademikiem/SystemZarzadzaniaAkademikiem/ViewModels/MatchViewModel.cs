@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Models;
 using SystemZarzadzaniaAkademikiem.Services;
 
@@ -12,16 +13,18 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         private readonly RoomRepo roomRepo;
         private readonly User user;
         private readonly UserRepo userRepo;
+        private AppDatabase database;
         public List<Room> Rooms;
         public List<User> Users;
         private string bestCandidate = "";
         private int points;
 
-        public MatchViewModel(string index)
+        public MatchViewModel(string index, AppDatabase database)
         {
             this.index = index;
-            userRepo = new UserRepo(App.Database);
-            roomRepo = new RoomRepo(App.Database);
+            this.database = database;
+            userRepo = new UserRepo(database);
+            roomRepo = new RoomRepo(database);
             Rooms = roomRepo.GetRoomsAsync().Result;
             Users = userRepo.GetUsersAsync().Result;
             user = userRepo.GetUserAsync(index).Result;

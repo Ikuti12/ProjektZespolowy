@@ -1,4 +1,5 @@
-﻿using SystemZarzadzaniaAkademikiem.Services;
+﻿using SystemZarzadzaniaAkademikiem.Data;
+using SystemZarzadzaniaAkademikiem.Services;
 using SystemZarzadzaniaAkademikiem.Validators;
 using SystemZarzadzaniaAkademikiem.Views;
 using Xamarin.Forms;
@@ -13,11 +14,11 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         private string _loginError;
         private string _passwordError;
 
-        public AdminLoginViewModel()
+        public AdminLoginViewModel(AppDatabase database)
         {
             Title = "Welcome to Admin Login Page.Please enter credentials below.";
             LoginAsAdmin = new Command(ExecuteLoginAsAdmin);
-            adminRepo = new AdminRepo(App.Database);
+            adminRepo = new AdminRepo(database);
         }
 
         public string Login

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Models;
 using SystemZarzadzaniaAkademikiem.Services;
 using Xamarin.Forms;
@@ -14,21 +15,22 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         private UserRepo userRepo;
         private AdminRepo adminRepo;
         private RoomRepo roomRepo;
-
+        private AppDatabase database;
         public ObservableCollection<Column> Columns { get; set; }
         public Command LoadColumnsCommand { get; set; }
         public Command AddRecordCommand { get; set; }
         private readonly string tableName;
-        public AddRecordViewModel(string tableName)
+        public AddRecordViewModel(string tableName, AppDatabase database)
         {
             Title = "Add Column";
             this.tableName = tableName;
             Columns = new ObservableCollection<Column>();
             LoadColumnsCommand = new Command(() => ExecuteLoadColumnsCommand());
             AddRecordCommand = new Command(() => ExecuteAddRecordCommand());
-            userRepo = new UserRepo(App.Database);
-            adminRepo = new AdminRepo(App.Database);
-            roomRepo = new RoomRepo(App.Database);
+            this.database = database;
+            userRepo = new UserRepo(database);
+            adminRepo = new AdminRepo(database);
+            roomRepo = new RoomRepo(database);
         }
         void ExecuteLoadColumnsCommand()
         {
@@ -40,7 +42,7 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
             try
             {
                 Columns.Clear();
-                List<SQLiteConnection.ColumnInfo> list = App.Database.DatabaseNotAsync.GetTableInfo(tableName);
+                List<SQLiteConnection.ColumnInfo> list = database.DatabaseNotAsync.GetTableInfo(tableName);
                 foreach (var a in list)
                 {
                     if (a.Name.ToLower() != "id" && a.Name.ToLower() != "salt")

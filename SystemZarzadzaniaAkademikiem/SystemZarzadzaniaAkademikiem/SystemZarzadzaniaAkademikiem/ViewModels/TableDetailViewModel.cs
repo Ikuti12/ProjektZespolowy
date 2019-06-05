@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Models;
 using SystemZarzadzaniaAkademikiem.Services;
 using Xamarin.Forms;
@@ -10,11 +11,13 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         public string name;
         private UserRepo userRepo;
         private RoomRepo roomRepo;
-        public TableDetailViewModel(string name)
+        private AppDatabase database;
+        public TableDetailViewModel(string name, AppDatabase database)
         {
             this.name = name;
-            userRepo = new UserRepo(App.Database);
-            roomRepo = new RoomRepo(App.Database);
+            this.database = database;
+            userRepo = new UserRepo(database);
+            roomRepo = new RoomRepo(database);
         }
         public Command DeleteRecordCommand
         {
@@ -25,12 +28,12 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
                     switch (name)
                     {
                         case "SuperUser":
-                            App.Database.DatabaseNotAsync.Execute("DELETE FROM " + name + " WHERe Id=" + id);
+                            database.DatabaseNotAsync.Execute("DELETE FROM " + name + " WHERe Id=" + id);
                             break;
                         case "User":
-                            if (App.Database.Database.Table<User>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result!=null)
+                            if (database.Database.Table<User>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result!=null)
                             {
-                                var user = App.Database.Database.Table<User>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result;
+                                var user = database.Database.Table<User>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result;
                                 if (roomRepo.GetRoomAsync(user.RoomNumber).Result != null)
                                 {
                                     var room = roomRepo.GetRoomAsync(user.RoomNumber).Result;
@@ -61,9 +64,9 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
                             }
                             break;
                         case "Room":
-                            if (App.Database.Database.Table<Room>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result != null)
+                            if (database.Database.Table<Room>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result != null)
                             {
-                                var room = App.Database.Database.Table<Room>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result;
+                                var room = database.Database.Table<Room>().Where(i => i.Id == (int)id).FirstOrDefaultAsync().Result;
                                 if (room.StudentA!=null)
                                 {
                                     if (userRepo.GetUserAsync(room.StudentA).Result!=null)

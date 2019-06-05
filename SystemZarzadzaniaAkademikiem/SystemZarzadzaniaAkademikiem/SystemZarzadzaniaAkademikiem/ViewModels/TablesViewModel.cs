@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Models;
 using Xamarin.Forms;
 
@@ -12,8 +13,10 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
     {
         public ObservableCollection<Table> Tables { get; set; }
         public Command LoadTablesCommand { get; set; }
-        public TablesViewModel()
+        private AppDatabase database;
+        public TablesViewModel(AppDatabase database)
         {
+            this.database = database;
             Title = "Browse Tables";
             Tables = new ObservableCollection<Table>();
             LoadTablesCommand = new Command(()=> ExecuteLoadTablesCommand());
@@ -49,7 +52,7 @@ namespace SystemZarzadzaniaAkademikiem.ViewModels
         async Task<List<Table>> GetAllTablesAsync()
         {
             string queryString = $"SELECT name FROM sqlite_master WHERE type = 'table'";
-            return await App.Database.Database.QueryAsync<Table>(queryString).ConfigureAwait(false);
+            return await database.Database.QueryAsync<Table>(queryString).ConfigureAwait(false);
         }
     }
 }

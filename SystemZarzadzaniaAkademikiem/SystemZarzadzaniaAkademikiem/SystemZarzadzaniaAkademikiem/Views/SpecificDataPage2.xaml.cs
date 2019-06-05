@@ -16,7 +16,7 @@ namespace SystemZarzadzaniaAkademikiem.Views
         {
             if (viewModel.isValid)
             {
-                await Navigation.PushAsync(new Match(new MatchViewModel(viewModel.index)));
+                await Navigation.PushAsync(new Match(new MatchViewModel(viewModel.index, App.Database)));
             }
         }
     }

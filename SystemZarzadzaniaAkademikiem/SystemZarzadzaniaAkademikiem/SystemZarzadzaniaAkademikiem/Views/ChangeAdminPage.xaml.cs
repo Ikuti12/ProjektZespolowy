@@ -14,7 +14,7 @@ namespace SystemZarzadzaniaAkademikiem.Views
 		{
             this.mainPage = mainPage;
 			InitializeComponent ();
-            BindingContext = viewModel = new AdminChangeViewModel();
+            BindingContext = viewModel = new AdminChangeViewModel(App.Database);
         }
 
         async private void Button_Clicked(object sender, EventArgs e)
