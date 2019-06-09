@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SystemZarzadzaniaAkademikiem.Models.Column">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Column.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Models.User">
+    <Position X="7.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BEACAAEAAAAABAhMAAAEIARAAIEAAAAAAQGAAEAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Services.AdminRepo">
+    <Position X="4.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAEA=</HashCode>
+      <FileName>Services\AdminRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.ImportantDataPage">
+    <Position X="14.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ImportantDataPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.AddRecordViewModel">
+    <Position X="21.75" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAIAAAAABAAACAABAAAAAAAAABAAgAAAgAAAA=</HashCode>
+      <FileName>ViewModels\AddRecordViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.AdminChangeViewModel">
+    <Position X="18" Y="1" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAQACACBCAhAQBAAAAAAAABAABEACIAIAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminChangeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.AdminLoginViewModel">
+    <Position X="18.75" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>gASAIAAAAAAAAAEAAAAABAACAAAAIAQCAAAQIIAAAAA=</HashCode>
+      <FileName>ViewModels\AdminLoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.BaseViewModel" Collapsed="true">
+    <Position X="18.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAAIEAAAABAgAEAAAAAAAAEAAAABAA=</HashCode>
+      <FileName>ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.EditRecordViewModel">
+    <Position X="25.25" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAAAAEAABAAACAAAAAAAAAAAABAAAAAggAggA=</HashCode>
+      <FileName>ViewModels\EditRecordViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.SpecificDataPage1ViewModel">
+    <Position X="25.25" Y="8.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAEAAACACUhAAAiAAABAAABAAEAAAAiAAEARAUA=</HashCode>
+      <FileName>ViewModels\SpecificDataPage1ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.SpecificDataPage2ViewModel">
+    <Position X="29.5" Y="8.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAAAAACACEAEAACkABAAAIAAAAEAAQEAASABAQA=</HashCode>
+      <FileName>ViewModels\SpecificDataPage2ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.MatchViewModel">
+    <Position X="32.5" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAICCAIARAAAhAAICAAAAKAAAAAAAAgAAAABABAQA=</HashCode>
+      <FileName>ViewModels\MatchViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.MainPageViewModel">
+    <Position X="18.75" Y="15" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAgQAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ViewModels\MainPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.ImportantDataViewModel">
+    <Position X="22" Y="14.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAJAAAAICIDAYIBAGkAAwAABAAAgAAAAEEgAFCAAA=</HashCode>
+      <FileName>ViewModels\ImportantDataViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.TableDetailViewModel">
+    <Position X="32.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAABBAAACAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\TableDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.ViewModels.TablesViewModel">
+    <Position X="28.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAACAAABAAAAAQAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\TablesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Validators.Validator">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAIAAAAAAAABAgAAAAAAAAAAA=</HashCode>
+      <FileName>Validators\Validator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Services.UserRepo">
+    <Position X="6.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAQQABAA=</HashCode>
+      <FileName>Services\UserRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Services.StringCipher">
+    <Position X="8.5" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAgAAEAQAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Services\StringCipher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Services.RoomRepo">
+    <Position X="4.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAEEAAAAA=</HashCode>
+      <FileName>Services\RoomRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.AboutPage" Collapsed="true">
+    <Position X="9.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AboutPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.AddRecordPage">
+    <Position X="11.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAQAAAAAACAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddRecordPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.AdminLoginPage">
+    <Position X="12" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminLoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.ChangeAdminPage">
+    <Position X="9.75" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAACAAAAAAAAAAQAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ChangeAdminPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.CRUDMainPage">
+    <Position X="13" Y="16.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACA=</HashCode>
+      <FileName>Views\CRUDMainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.CRUDMenu">
+    <Position X="13" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Views\CRUDMenu.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.EditRecordPage">
+    <Position X="8" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAQAAAAAACAAAABAAAAAAAAAgA=</HashCode>
+      <FileName>Views\EditRecordPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.MainPage">
+    <Position X="11.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.Match">
+    <Position X="15.25" Y="16.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAgAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Match.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.SpecificDataPage1">
+    <Position X="14.5" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Views\SpecificDataPage1.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.SpecificDataPage2">
+    <Position X="14.5" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Views\SpecificDataPage2.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.TableDetailPage">
+    <Position X="10.25" Y="18.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAAAgAAIBAAAAQAAEBAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Views\TableDetailPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Views.TablesPage">
+    <Position X="10.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\TablesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.App">
+    <Position X="15.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIBAAAFAAAAhAEACAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Models.HomeMenuItem">
+    <Position X="9.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\HomeMenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Models.Room">
+    <Position X="8" Y="15.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAABgAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Models.SuperUser">
+    <Position X="7.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>Models\SuperUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Models.Table">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Controls.EnumBindablePicker&lt;T&gt;">
+    <Position X="15.5" Y="19.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAABAAACAAAABAAAIAAgAA=</HashCode>
+      <FileName>Controls\EnumBindablePicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemZarzadzaniaAkademikiem.Data.AppDatabase">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AppDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SystemZarzadzaniaAkademikiem.Services.IAdminRepo">
+    <Position X="4.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IAdminRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SystemZarzadzaniaAkademikiem.Services.IUserRepo">
+    <Position X="6.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQQABAA=</HashCode>
+      <FileName>Services\IUserRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SystemZarzadzaniaAkademikiem.Services.IRoomRepo">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEEAAAAA=</HashCode>
+      <FileName>Services\IRoomRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.BedLocation">
+    <Position X="0.5" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>Enums\BedLocation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Models.MenuItemType">
+    <Position X="9.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAEAAAAAAAIAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\HomeMenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.Floor">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAIAAAIAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Enums\Floor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.HomeBack">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAABAAAAAAAACAEAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\HomeBack.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.HotOrNot">
+    <Position X="0.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIQAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\HotOrNot.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.Music">
+    <Position X="0.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAQ=</HashCode>
+      <FileName>Enums\Music.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.Party">
+    <Position X="0.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAABAAAAAAAACAEAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Party.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.Sex">
+    <Position X="0.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAIAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Sex.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.SleepTime">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAIAAAAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Enums\SleepTime.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.StudyField">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Enums\StudyField.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.Talkative">
+    <Position X="0.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIEAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Talktative.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.WakeUpTime">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAACAIgAAAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Enums\WakeUpTimecs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SystemZarzadzaniaAkademikiem.Enums.YesNo">
+    <Position X="0.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAIAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\YesNo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
