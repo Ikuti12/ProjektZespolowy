@@ -1,5 +1,8 @@
+using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Windows.Input;
+using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Models;
 using SystemZarzadzaniaAkademikiem.ViewModels;
 using SystemZarzadzaniaAkademikiem.Views;
@@ -11,11 +14,12 @@ namespace MVVMTest.VievModelTests
     public class AdminLoginViewModelTests
     {
         private AdminLoginViewModel viewModel;
+        private AppDatabase database = new AppDatabase("test");
 
         [SetUp]
         public void Setup()
         {
-            viewModel = new AdminLoginViewModel();
+            viewModel = new AdminLoginViewModel(database);
         }
 
         [Test]
@@ -68,17 +72,15 @@ namespace MVVMTest.VievModelTests
             Assert.AreEqual("Has³o albo login nie s¹ prawid³owe", result);
         }
 
-        //[Test]
-        //public void NoMessageWhenSuccessfulSing()
-        //{
-        //    viewModel.Login = "Admin";
-        //    viewModel.Password = "S3cr3tP@ss";
-        //    viewModel.LoginAsAdmin.Execute(null);
+        [Test]
+        public void canExecute()
+        {
+            viewModel.Login = "Admin";
+            viewModel.Password = "S3cr3tP@ss";
+            ICommand ic = viewModel.LoginAsAdmin;
+            var result = ic.CanExecute(null);
 
-        //    var resultLog = viewModel.LoginError;
-        //    var resultPas = viewModel.PasswordError;
-
-        //    Assert.IsTrue(resultLog.Equals(resultPas.Equals("")));
-        //}
+            Assert.IsTrue(result);
+        }
     }
 }

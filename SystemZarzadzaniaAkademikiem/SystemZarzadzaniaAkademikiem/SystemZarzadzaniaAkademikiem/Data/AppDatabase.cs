@@ -3,7 +3,7 @@ using SystemZarzadzaniaAkademikiem.Models;
 
 namespace SystemZarzadzaniaAkademikiem.Data
 {
-    public class AppDatabase
+    public class AppDatabase : IAppDatabase
     {
         public SQLiteAsyncConnection Database { get; }
         public SQLiteConnection DatabaseNotAsync { get; }
