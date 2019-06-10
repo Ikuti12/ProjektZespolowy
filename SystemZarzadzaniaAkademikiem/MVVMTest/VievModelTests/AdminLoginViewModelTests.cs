@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using SystemZarzadzaniaAkademikiem.Data;
 using SystemZarzadzaniaAkademikiem.Models;
+using SystemZarzadzaniaAkademikiem.Services;
 using SystemZarzadzaniaAkademikiem.ViewModels;
 using SystemZarzadzaniaAkademikiem.Views;
 using Xamarin.Forms;
@@ -70,17 +71,6 @@ namespace MVVMTest.VievModelTests
             var result = viewModel.PasswordError;
 
             Assert.AreEqual("Has³o albo login nie s¹ prawid³owe", result);
-        }
-
-        [Test]
-        public void canExecute()
-        {
-            viewModel.Login = "Admin";
-            viewModel.Password = "S3cr3tP@ss";
-            ICommand ic = viewModel.LoginAsAdmin;
-            var result = ic.CanExecute(null);
-
-            Assert.IsTrue(result);
         }
     }
 }

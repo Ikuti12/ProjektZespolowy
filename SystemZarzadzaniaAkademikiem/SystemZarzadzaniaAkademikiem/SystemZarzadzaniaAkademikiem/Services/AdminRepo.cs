@@ -38,7 +38,7 @@ namespace SystemZarzadzaniaAkademikiem.Services
                 return _database.InsertAsync(admin);
             }
         }
-        static string RandomString(int length)
+        public static string RandomString(int length)
         {
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             StringBuilder res = new StringBuilder();

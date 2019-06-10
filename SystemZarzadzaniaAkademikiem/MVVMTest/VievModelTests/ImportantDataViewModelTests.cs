@@ -46,15 +46,6 @@ namespace MVVMTest.VievModelTests
             Assert.AreEqual(viewModel.Lastname, "Sobczak");
         }
 
-        //[Test]
-        //public void IndexErrorNotFound()
-        //{
-        //    user.Index = "312312";
-        //    viewModel = new ImportantDataViewModel(database, user);
-        //    viewModel.SaveImportantDataPreferences.Execute(null);
-
-        //    Assert.AreEqual("Imię nie pasuje do podanego indeksu", viewModel.LastnameError);
-        //}
 
         [Test]
         public void NameErrorNotFound()
